@@ -40,8 +40,8 @@ public class Paciente {
 	public void setNombre(String nombre) {
 		if (nombre == null || nombre.trim().isEmpty()) { 
 			throw new NullPointerException("ERROR: El nombre de un paciente no puede ser nulo o vacío.");
-		} else
-		{
+		} else {
+		
 			this.nombre = formateaNombre(nombre);
 		}  
 
@@ -121,7 +121,7 @@ public class Paciente {
 		}
 	}
 
-	//Métodos hash y equals
+	//Métodos hashCode y equals
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni);
