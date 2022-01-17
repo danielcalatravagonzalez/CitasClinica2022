@@ -25,7 +25,6 @@ public class Cita {
 			setPaciente(eCita.getPaciente());
 			setFechaHora(eCita.getFechaHora());
 		}
-		
 	}
 
 	//Métodos Getters y Setters
@@ -71,6 +70,7 @@ public class Cita {
 		return Objects.equals(fechaHora, other.fechaHora);
 	}
 
+	//Método toString
 	@Override
 	public String toString() {
 		return paciente + ", fechaHora=" + fechaHora.format(DateTimeFormatter.ofPattern(FORMATO_FECHA_HORA)) + "";
