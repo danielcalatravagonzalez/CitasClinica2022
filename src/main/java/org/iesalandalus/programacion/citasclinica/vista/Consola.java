@@ -23,20 +23,23 @@ public class Consola {
 		System.out.println("1. Insertar una cita.");
 		System.out.println("2. Buscar una cita.");
 		System.out.println("3. Borrar una cita.");
-		System.out.println("4. Ver todas las citas.");
-		System.out.println("5. Ver citas con una fecha determinada.");
-		System.out.println("6. Salir.");
+		System.out.println("4. Ver las citas con una fecha determinada.");
+		System.out.println("5. Ver todas las citas.");
+		System.out.println("0. Salir.");
 	}
 	
 	//Método elegirOpcion()
 	public static Opciones elegirOpcion() {
-	Opciones [] opcion = Opciones.values();
-	int opcionMenu;
-		do {
-			System.out.println("Elige una de las opciones mostradas anteriormente del 1 al 6:");
-			opcionMenu = Entrada.entero();
-			}while (opcionMenu < 1 || opcionMenu > 6);
-				return opcion[opcionMenu];
+		Opciones[] opcion = Opciones.values();
+		System.out.println("");
+		System.out.println("Por favor, elija una opción");
+		System.out.println("");
+		int opcionElegida = Entrada.entero();
+		while(opcionElegida < 0 || opcionElegida > 5) {
+			System.out.println("Por favor, elija una opción comprendida entre 0 y 5: ");
+			opcionElegida = Entrada.entero();
+		}
+		return opcion[opcionElegida];
 	}
 	
 	
